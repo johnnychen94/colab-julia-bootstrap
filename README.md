@@ -2,7 +2,7 @@
 
 Steps to run:
 
-1. Open `julia.ipynb` file on your colab
+1. Open `julia.ipynb` file on your colab: [quick link](https://colab.research.google.com/drive/1_4Yz3FKO5_uuYvamEfHqwtFT9WpCuSbm?usp=sharing)
 2. install the Julia kernel by running the first block
 3. refresh the page
 4. start coding Julia in colab 🎉
