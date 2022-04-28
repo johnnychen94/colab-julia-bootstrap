@@ -9,23 +9,23 @@ Steps to run:
 3. refresh the page
 4. start coding Julia in colab 🎉
 
-What's behind the scenes, a step by step explaination:
+What's behind the scenes, a step by step explanation:
 
 1. jupyter notebook has predefined kernelspec information, this `julia.ipynb` file predefines `"julia"` kernel. You can find this by checking [in raw format](https://raw.githubusercontent.com/johnnychen94/colab-julia-bootstrap/master/julia.ipynb)
-2. when you start a new runtime in colab, it trys to open the julia kernel, because that's what `julia.ipynb` requires. But unfortunately this will fail, so colab falls back to using the Python kernel
+2. when you start a new runtime in colab, it tries to open the Julia kernel, because that's what `julia.ipynb` requires. But unfortunately this will fail, so colab falls back to using the Python kernel
 3. install the Julia kernel by running the first block in python kernel (note the prefix `!`)
-4. refresh the page, colab will then reload the notebook, again, it will tries to load the `julia` kernel. But since we have it installed in the current runtime, this time it will success.
+4. refresh the page, colab will then reload the notebook, again, it will try to load the `julia` kernel. But since we have it installed in the current runtime, this time it will succeed.
 
-Because the `julia` kernelspec is not available by default, you will need to install julia kernel everytime when you start a new colab runtime.
+Because the `julia` kernelspec is not available by default, you will need to install Julia kernel everytime when you start a new colab runtime.
 
 ## For GPU runtime
 
 ### My GPU runtime switches back to CPU runtime
 
 For GPU runtimes, it seems that when you refresh the page via "Ctrl-R" colab will redirect you to
-the CPU runtimes and thus you loss the Julia kernel. I don't know the internal but this is perhaps a
+the CPU runtimes and thus you lose the Julia kernel. I don't know the internal but this is perhaps a
 colab strategy to save GPU resource. To fix it, instead of manually refreshing page via "Ctrl-R",
-you can instead trigger kernal reloading by:
+you can instead trigger kernel reloading by:
 
 1. go to "view resources" -> "change runtime type"
 2. ensure it is "Julia" and "GPU". Almost certainly you don't need to change anything here if you're already on GPU runtime.
